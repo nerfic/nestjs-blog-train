@@ -81,7 +81,7 @@ describe('ArticleController', () => {
       const articleId = '67d2d783942c0508112c9cce';
       mockArticleService.getArticle.mockResolvedValue(null);
 
-      await expect(controller.getArticle(articleId)).rejects.toThrowError('Article not found');
+      await expect(controller.getArticle(articleId)).rejects.toThrowError(`Article ${articleId} not found`);
     });
   });
 
