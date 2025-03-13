@@ -1,6 +1,6 @@
 import { Body, Controller, Get, NotFoundException, Param, Post } from '@nestjs/common';
 import { ArticleService } from './article.service';
-import { CreateArticleDto } from './dto/create-article';
+import { CreateArticleDto } from './dto/create-article.dto';
 
 @Controller('article')
 export class ArticleController {

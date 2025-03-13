@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ArticleController } from './article.controller';
 import { ArticleService } from './article.service';
-import { CreateArticleDto } from './dto/create-article';
+import { CreateArticleDto } from './dto/create-article.dto';
 
 const mockArticleService = {
   createArticle: jest.fn(),
