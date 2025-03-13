@@ -13,9 +13,9 @@ export class ArticleController {
 
     @Get(':id')
     async getArticle(@Param('id') id: string) {
-        const article = this.articleService.getArticle(id)
+        const article = await this.articleService.getArticle(id)
         if (!article) {
-            throw new NotFoundException(`Article ${id} not found.`)
+            throw new NotFoundException(`Article ${id} not found`);
         }
         return article
     }
