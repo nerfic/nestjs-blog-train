@@ -19,7 +19,7 @@ export class ArticleService {
 		return this.prisma.article.findMany()
 	}
 
-	async createArticle(createArticleDto: CreateArticleDto) {
+	async createArticle(createArticleDto: CreateArticleDto, userId: string) {
 		const { title, content, tags } = createArticleDto;
 
 		const newArticle = await this.prisma.article.create({
@@ -28,7 +28,7 @@ export class ArticleService {
 				content,
 				tags,
 				archived: false,
-				user: "67d2d783942c0508112c9cce",
+				user: userId,
 				createdAt: new Date(),
 				updatedAt: new Date(),
 			},
